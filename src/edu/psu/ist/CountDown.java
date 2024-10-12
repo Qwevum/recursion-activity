@@ -29,7 +29,19 @@ public final class CountDown {
      * implement this implement the method and
      */
     public static void countDownThenUp(int n) {
-        // todo
+
+        // step 1: come up with a base case / stopping case
+        if (n <= 0) {
+            return;
+        }
+        System.out.println(n);
+        // step 2: make a recursive call
+        countDownThenUp(n - 1);
+        System.out.println(n);
+    }
+
+    public static void main(String[] args) {
+        countDownThenUp(3);
     }
 
     /**
@@ -47,7 +59,11 @@ public final class CountDown {
      * </code></pre>
      */
     public static int bunnyEars(int n) {
-        // "method stub"
-        return 0;
+        //base case: done when n drops to 0
+        if (n <= 0){
+           return 0;
+        }
+        return 2 + bunnyEars(n - 1);
+
     }
 }

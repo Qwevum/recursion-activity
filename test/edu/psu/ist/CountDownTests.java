@@ -10,6 +10,12 @@ public final class CountDownTests {
         Assertions.assertEquals(4, computedEarCount);
     }
 
+    @Test
+    public void testBunnyEars02() {
+        int computerEarCount = CountDown.bunnyEars(2);
+        Assertions.assertEquals(4, computerEarCount);
+    }
+
     // NOTE on testing countDownThenUp:
     // it's a little trickier to write jUnit tests for
     // methods that return void -- so just print the 
